@@ -6,10 +6,10 @@
         id        = "com.app.samofit"
         version   = "1.0.2">
 	
-    <name>SaMo Fit</name>
+    <name>Endurance log</name>
 
     <description>
-        New SaMo Fit app.
+        SaMo Fit run app.
     </description>
 
     <author href="http://samofit.com" email="qmcgilvery12@gmail.com">
