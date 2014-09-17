@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>		
+	<link href="css/newsamofit.css" rel="stylesheet" class="cssfx" type="text/css" />
+	<link href="css/bootstrap.css" rel="stylesheet" class="cssfx" type="text/css" />
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" class="cssfx" type="text/css" />
+	<link href="kendo.mobile.all.min.css" rel="stylesheet" />
+	
+	<script src="phonegap.js"></script>  
+	<script src="jquery.js"></script>
+	<script src="kendo.mobile.min.js"></script>
+	<script src="openfb.js"></script>
+	<script>
+		 // Defaults to sessionStorage for storing the Facebook token
+		 openFB.init({appId: '1379454819008951'});
+
+		//  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
+		//  openFB.init({appId: 'YOUR_FB_APP_ID', tokenStore: window.localStorage});
+		function login() {
+			openFB.login(
+					function(response) {
+						if(response.status === 'connected') {
+							getInfo();
+						} else {
+							alert('Facebook login failed: ' + response.error);
+						}
+					}, {scope: 'email,read_stream,publish_stream'});
+			testAPI();
+		}
+
+		function getInfo() {
+			openFB.api({
+				path: '/me',
+				success: function(data) {
+					console.log(JSON.stringify(data));
+					document.getElementById('username').value = data.email;		
+					document.getElementById('first_name').value = data.first_name;
+					document.getElementById('password').value = data.email;
+					document.getElementById('last_name').value = data.last_name;
+					document.getElementById('email').value = data.email;
+					document.getElementById("formy").submit();
+					//document.getElementById("userPic").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
+				},
+				error: errorHandler});
+		}
+
+		function share() {
+			openFB.api({
+				method: 'POST',
+				path: '/me/feed',
+				params: {
+					message: document.getElementById('Message').value || 'Testing Facebook APIs'
+				},
+				success: function() {
+					alert('the item was posted on Facebook');
+				},
+				error: errorHandler});
+		}
+
+		function revoke() {
+			openFB.revokePermissions(
+					function() {
+						alert('Permissions revoked');
+					},
+					errorHandler);
+		}
+
+		function logout() {
+			openFB.logout(
+					function() {
+						alert('Logout successful');
+					},
+					errorHandler);
+		}
+
+		function errorHandler(error) {
+			alert(error.message);
+		}
+		
+		function testAPI() {
+		FB.api('/me', function(response) {
+			document.getElementById('username').value = response.email;
+			document.getElementById('first_name').value = response.first_name;
+			document.getElementById('password').value = response.email;
+			document.getElementById('last_name').value = response.last_name;
+			document.getElementById('email').value = response.email;
+			//document.getElementById("formy").submit();
+			//FB.logout(function(response) {
+			// user is now logged out
+			//});
+			});
+		}
+	</script>
+</head>
+<body>
+	<div data-role="view">
+		<header data-role="header">
+			<div data-role="navbar">
+				<span data-role="view-title">Login</span>
+			</div>
+		</header>
+	<div class="bgc-gr ajax">
+		<form action="http://samofit.com/login_mobile_runapp.php" method="post">
+			<ul data-role="listview" id="login">
+				<li>
+					Username:
+					<input type="text" name="username" />
+				</li>
+				<li>
+					Password:
+					<input type="password" name="password" />
+				</li>
+				<li>
+					<button type="submit" value="login" class="btn btn-default">Sign in</button>
+				</li>
+			</ul>
+		</form>
+		<div class="or-fb"><span class="sp-ab">or</span></div>
+		<button class="btn btn-block fb-button" onclick="login();">Login with Facebook</button>
+	</div>		
+		<div class="ajax">
+				<ul data-role="listview">
+				<li>
+					Forgotten your <a href="http://www.samofit.com/recover.php?mode=username">username</a> or <a href="http://www.samofit.com/recover.php?mode=password">password?</a>
+				<br>
+					Not a SaMo Fit member?<a href="http://www.samofit.com/register.php"> Register Today!</a>
+				</li>
+				</ul>
+				</div>
+
+		<!--
+		<script src="main.js"></script>
+		<button class="btn btn-block" onclick="getInfo()">Get My Info</button>
+		<p>Name: <span id="userName"></span></p>
+		<img id="userPic"/>
+		<hr/>
+		
+		<textarea id="Message" placeholder="What's on your mind?" rows="5"></textarea>
+		<button class="btn btn-block" onclick="share()">Share</button>
+		<hr/>
+		
+		<p>Complete Facebook Logout. After logging out, you'll have to login again and provide your Facebook credentials.</p>
+		<button class="btn btn-block" onclick="logout()">Logout</button>
+		<hr/>
+		
+		<p>Revoke App Permissions. After revoking permissions, you'll have to grant permissions again when logging in.</p>
+		<button class="btn btn-block" onclick="revoke()">Revoke Permissions</button>-->
+
+		<form id="formy" data-ajax="false" class="navbar-form navbar-left hide" action="http://samofit.com/fb_login_processor_runapp.php" method="post">
+			<div class="form-group">
+				<ul id="login">
+					<li>	
+						<input id="username" type="hidden" name="username"/>
+					</li>
+					<li>
+						<input id="password" type="hidden" name="password"/>
+					</li>
+					<li>
+						<input id="email" type="hidden" name="email" />
+					</li>
+					<li>
+						<input id="first_name" type="hidden" name="first_name"/>
+					</li>
+					<li>
+						<input id="last_name" type="hidden" name="last_name"/>
+					</li>
+					<li></li>
+				 </ul>
+			</div>    
+		</form>
+	</div>
+	<div data-role="layout" data-id="layouts">
+		<header data-role="header">
+			<div data-role="navbar">
+				<span data-role="view-title"></span>
+			</div>
+		</header>
+	</div>   
+	<script src="sdk.js"></script>
+	<script>
+		 new kendo.mobile.Application($(document.body), {
+         skin: "android-light"
+     });
+	</script>        
+</body>
+</html>

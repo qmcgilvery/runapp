@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acceleration Example</title>
+
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" charset="utf-8">	</script>
+	
+	<link rel="stylesheet" href="kendo.mobile.all.min.css">
+	<link rel="stylesheet" href="bootstrap2.css">
+	
+	<script src="jquery.js"></script>
+	        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="kendo.mobile.min.js"></script>
+	<script src="app.js"></script>
+</head>
+ 
+<body> 
+
+<div id="touch">Touch here</div>
+
+<!-- HOME/NAVIGATIONAL IMAGES -->       
+	<div data-role="view" id="drawer-home" data-layout="drawer-layout" data-title="Shadow burn">
+		<div class="row mt-fifteen">
+			<div class="col-xs-6 col-md-3">
+				<div class="thumbnail">
+					<a href="#recent-list"><img src="http://samofit.com/images/kicks1.jpg" class="img-rounded"></a>
+					<div class="caption">
+						<h3 class="mt-ten">Recent</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="thumbnail">
+					<a href="#levels-img"><img src="http://samofit.com/images/kicks2.jpg" class="img-rounded"></a>
+					<div class="caption">
+						<h3 class="mt-ten">Levels</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="thumbnail">
+					<a href="#games-img"><img src="http://samofit.com/images/kicks1.jpg" class="img-rounded"></a>
+					<div class="caption">
+						<h3 class="mt-ten">Games</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="thumbnail">
+					<a href="#info-howto-img"><img src="http://samofit.com/images/kicks2.jpg" class="img-rounded"></a>
+					<div class="caption">
+						<h3 class="mt-ten">About</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+<!-- RECENT LIST-->            
+        <div data-role="view" id="recent-list" data-layout="drawer-layout" data-title="Recent">
+            <ul data-role="listview" class="inboxList">
+                <li>
+                    <a href="#workout1">
+                        <h3 class="time">7/7/14</h3><h3>Amateur</h3>
+                        <h2>The Tiger</h2>
+                        <p>Slip, Catch, Rock</p>   
+                    </a>    
+                </li>
+                <li class="greybg">
+                    <a href="#workout2">
+                        <h3 class="time">7/7/14</h3><h3>Prospect</h3>
+                        <h2>Holmeboy</h2>
+                        <p>Slip, Catch, Rock</p>   
+                    </a>
+                </li>
+                <li>
+                    <a href="#workout3">
+                        <h3 class="time">7/7/14</h3><h3>Contender</h3>
+                        <h2>Watts</h2>
+                        <p>Slip, Catch, Rock</p>   
+                    </a>
+                </li>
+                <li class="greybg">
+                    <a href="#workout4">
+                        <h3 class="time">7/7/14</h3><h3>Champion</h3>
+                        <h2>Some Mo</h2>
+                        <p>Slip, Catch, Rock</p>   
+                    </a>
+                </li>
+            </ul>
+        </div>
+		
+<!-- LEVELS IMAGES -->        
+        <div data-role="view" id="levels-img" data-layout="drawer-layout" data-title="Levels">
+            <div class="row mt-fifteen">
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#drawer-amateur"><img src="http://samofit.com/images/kicks1.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Amateur</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#drawer-prospect"><img src="http://samofit.com/images/kicks2.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Prospect</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#drawer-contender"><img src="http://samofit.com/images/kicks1.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Contender</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#drawer-champion"><img src="http://samofit.com/images/kicks2.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Champion</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+		
+<!-- LEVELS LIST -->         
+        <div data-role="view" id="drawer-amateur" data-layout="drawer-layout" data-title="Amateur">
+            <ul data-role="listview" class="inboxList">
+                <li>
+                    <a href="#workout1">
+                        <h3 class="time">7/7/14</h3><h3>Amateur</h3>
+                        <h2>The Tiger</h2>
+                        <p>Slip, Catch, Rock</p>   
+                    </a>     
+                </li>
+            </ul>
+        </div>
+        <div data-role="view" id="drawer-prospect" data-layout="drawer-layout" data-title="Prospect">
+            <ul data-role="listview" class="inboxList">
+                <li>
+                    <a href="#workout2">
+                        <h3 class="time">7/7/14</h3><h3>Amateur</h3>
+                        <h2>The Tiger</h2>
+                        <p>Slip, Catch, Rock</p>   
+                    </a>     
+                </li>
+            </ul>
+        </div>
+        <div data-role="view" id="drawer-contender" data-layout="drawer-layout" data-title="Contender">
+            <ul data-role="listview" class="inboxList">
+                <li>
+                    <a href="#workout3">
+                        <h3 class="time">7/7/14</h3><h3>Amateur</h3>
+                        <h2>The Tiger</h2>
+                        <p>Slip, Catch, Rock</p>   
+                    </a> 
+                </li>
+            </ul>
+        </div>
+        <div data-role="view" id="drawer-champion" data-layout="drawer-layout" data-title="Champion">
+            <ul data-role="listview" class="inboxList">
+                <li>
+                    <a href="#workout4">
+                        <h3 class="time">7/7/14</h3><h3>Amateur</h3>
+                        <h2>The Tiger</h2>
+                        <p>Slip, Catch, Rock</p>   
+                   </a> 
+                </li>
+            </ul>
+        </div>
+		
+<!-- GAMES IMAGES -->        
+        <div data-role="view" id="games-img" data-layout="drawer-layout" data-title="Games">
+            <div class="row mt-fifteen">
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#game-speed"><img src="http://samofit.com/images/kicks1.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Speed</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#game-power"><img src="http://samofit.com/images/kicks2.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Power</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#game-stamina"><img src="http://samofit.com/images/kicks1.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Stamina</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+  
+					<!-- GAMES-SPEED PAGE -->      
+						<div data-role="view" id="game-speed" data-layout="defaultlayout" data-title="SPEED">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="thumbnail">
+										<img src="http://samofit.com/images/kicks3.jpg" alt="kicks" height="300" width="500">
+										<div class="center-block caption inboxList">
+											<h3 class="time">Speed test</h3>
+											<p class="summary">See how fast you can punch!</p>
+											<br>
+											<button  onClick="playAudio();" class="btn btn-lg btn-primary btn-block" role="button">Start</button>
+											<button  onClick="pauseAudio();" class="btn btn-lg btn-primary btn-block" role="button">Pause</button>
+										</div>
+									</div>
+								</div>             
+							</div> 
+						</div>   
+					<!-- GAMES-POWER PAGE -->		
+						<div data-role="view" id="game-power" data-layout="defaultlayout" data-title="POWER">
+						   <div class="row">
+							   <div class="col-xs-12">
+								   <div class="thumbnail">
+									   <img src="http://samofit.com/images/kicks3.jpg" alt="kicks" height="300" width="500">
+									   <div class="center-block caption inboxList">
+										   <h3 class="time">Power test</h3>
+										   <p class="summary">Find out how much power you pack!</p>
+										   <br>
+										   <button  onClick="playAudio();" class="btn btn-lg btn-primary btn-block" role="button">Start</button>
+										   <button  onClick="pauseAudio();" class="btn btn-lg btn-primary btn-block" role="button">Pause</button>
+									   </div>
+								   </div>
+							   </div>             
+							</div> 
+						</div>  
+					<!-- GAMES-STAMINA PAGE -->
+						<div data-role="view" id="game-stamina" data-layout="defaultlayout" data-title="STAMINA">
+						   <div class="row">
+							   <div class="col-xs-12">
+								   <div class="thumbnail">
+									   <img src="http://samofit.com/images/kicks5.jpg" alt="kicks" height="300" width="500">
+									   <div class="center-block caption inboxList">
+										   <h3 class="time">Stamina test</h3>
+										   <p class="summary">See how long you can last!</p>
+										   <br>
+										   <a href="http://samofit.com/audio.html" class="btn btn-lg btn-primary btn-block" role="button">Start</a>
+										   <button  onClick="pauseAudio();" class="btn btn-lg btn-primary btn-block" role="button">Pause</button>
+									   </div>
+								   </div>
+							   </div>             
+							</div> 
+						</div> 
+		
+<!-- INFO-IMAGES -->
+<div data-role="view" id="info-howto-img" data-layout="drawer-layout" data-title="Info">
+            <div class="row mt-fifteen">
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#info-technique"><img src="http://samofit.com/images/kicks1.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Punches & Combinations</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#info-howto"><img src="http://samofit.com/images/kicks2.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">How to use the program</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <a href="#info-feedback"><img src="http://samofit.com/images/kicks1.jpg" class="img-rounded"></a>
+                        <div class="caption">
+                            <h3 class="mt-ten">Contact</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+	<!-- INFO-TECHNIQUE LIST -->    
+		<div data-role="view" id="info-technique" data-layout="defaultlayout" data-title="Punches & Combinations">
+           <ul data-role="listview" class="inboxList">
+                <li>
+                    <a href="#jab">
+                        <h2>Jab</h2>
+                   </a> 
+                </li>
+				<li>
+                    <a href="#cross">
+                        <h2>Cross</h2>
+                   </a> 
+                </li>
+				<li>
+                    <a href="#hook">
+                        <h2>Cross</h2>
+                   </a> 
+                </li>
+            </ul> 
+        </div>
+	<!-- INFO-HOWTO PAGE -->
+        <div data-role="view" id="info-howto" data-layout="defaultlayout" data-title="How to">
+           <div class="row">
+               <div class="col-xs-12">
+                   <p>
+                       How to follow the program
+                   </p>
+               </div>             
+            </div> 
+        </div> 
+	<!-- INFO-FEEDBACK PAGE -->		
+        <div data-role="view" id="info-feedback" data-layout="defaultlayout" data-title="Feedback">
+           <div class="row">
+               <div class="col-xs-12">
+                   <p>
+                       Feedback 
+                   </p>
+               </div>             
+            </div> 
+        </div>  
+		
+<!-- DRAWER -->        
+<div data-role="drawer" id="my-drawer" style="width: 270px" data-views="['drawer-home', 'drawer-amateur', 'drawer-champion', 'drawer-goat', 'drawer-prospect', 'drawer-contender', 'recent-list', 'levels-img', 'workout1', 'workout2', 'workout3', 'workout4', 'games-img', 'game-speed', 'game-power', 'game-stamina', 'info-howto', '/kendo-ui/mobile/m/drawer/index.html']">
+    <ul data-role="listview" data-type="group" class="dark-grey">
+        <li>
+            <ul>
+                <li class="drawer-link greybg"><a href="#drawer-home" data-transition="none">Home</a></li>
+            </ul>
+        </li>
+        <li>Levels
+            <ul>
+                <li class="drawer-link greybg"><a href="#drawer-amateur" data-transition="none"><span class="glyphicon glyphicon-star"></span>Amateur</a></li>
+                <li class="drawer-link greybg"><a href="#drawer-prospect" data-transition="none">Prospect</a></li>
+                <li class="drawer-link greybg"><a href="#drawer-contender" data-transition="none">Contender</a></li>
+                <li class="drawer-link greybg"><a href="#drawer-champion" data-transition="none">Champion</a></li>
+            </ul>
+        </li>
+        <li>Games
+            <ul>
+                <li class="greybg"><a href="#game-speed" data-transition="none">Speed</a></li>
+                <li class="greybg"><a href="#game-power" data-transition="none">Power</a></li>
+                <li class="greybg"><a href="#game-stamina" data-transition="none">Stamina</a></li>
+            </ul>
+        </li>
+        <li>Info
+            <ul>
+				<li class="greybg"><a href="#info-technique" data-transition="none">Punches & Combinations</a></li>
+                <li class="greybg"><a href="#info-howto" data-transition="none">How to use</a></li>
+                <li class="greybg"><a href="#info-feedback" data-transition="none">Send feedback</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+                    <!-- WORKOUTS -->        
+                            <div data-role="view" id="workout1" data-layout="defaultlayout" data-title="Workout-1">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="thumbnail">
+                                            <img src="http://samofit.com/images/kicks2.jpg" alt="kicks" height="300" width="500">
+                                            <div class="center-block caption inboxList">
+                                                <h3 class="times">Workout-1</h3><h3>3 Rounds</h3>
+                                                <p class="summary">In this workout you will learn the basic punches you will use throughout the program. The jab, cross and the hook.</p>
+                                                <br>
+                                                <a href="http://samofit.com/audio.html" class="btn btn-lg btn-primary btn-block" role="button">Go to</a>                                               
+												<button  onClick="audioElement.play();" class="btn btn-lg btn-primary btn-block" role="button">Start</button>
+												<button  onClick="audioElement.pause();" class="btn btn-lg btn-primary btn-block" role="button">Pause</button>
+                                            </div>
+                                        </div>
+                                    </div>             
+                                </div>           
+                            </div>
+                            <div data-role="view" id="workout2" data-layout="defaultlayout" data-title="Workout-2">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="thumbnail">
+                                            <img src="http://samofit.com/images/kicks4.jpg" alt="kicks" height="300" width="500">
+                                            <div class="center-block caption inboxList">
+                                                <h3 class="times">Workout-1</h3><h3>3 Rounds</h3>
+                                                <p class="summary">In this workout you will learn the basic punches you will use throughout the program. The jab, cross and the hook.</p>
+                                                <br>
+                                                <button  onClick="playAudio();" class="btn btn-lg btn-primary btn-block" role="button">Start</button>
+                                                <button  onClick="pauseAudio();" class="btn btn-lg btn-primary btn-block" role="button">Pause</button>
+                                            </div>
+                                        </div>
+                                    </div>             
+                                </div>           
+                            </div>
+                            <div data-role="view" id="workout3" data-layout="defaultlayout" data-title="Workout-3">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="thumbnail">
+                                            <img src="http://samofit.com/images/kicks5.jpg" alt="kicks" height="300" width="500">
+                                            <div class="center-block caption inboxList">
+                                                <h3 class="times">Workout-1</h3><h3>3 Rounds</h3>
+                                                <p class="summary">In this workout you will learn the basic punches you will use throughout the program. The jab, cross and the hook.</p>
+                                                <br>
+                                                <button  onClick="playAudio();" class="btn btn-lg btn-primary btn-block" role="button">Start</button>
+                                                <button  onClick="pauseAudio();" class="btn btn-lg btn-primary btn-block" role="button">Pause</button>
+                                            </div>
+                                        </div>
+                                    </div>             
+                                </div>           
+                            </div>
+                            <div data-role="view" id="workout4" data-layout="defaultlayout" data-title="Workout-4">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="thumbnail">
+                                            <img src="http://samofit.com/images/kicks6.jpg" alt="kicks" height="300" width="500">
+                                            <div class="center-block caption inboxList">
+                                                <h3 class="times">Workout-1</h3><h3>3 Rounds</h3>
+                                                <p class="summary">In this workout you will learn the basic punches you will use throughout the program. The jab, cross and the hook.</p>
+                                                <br>
+                                                <button  onClick="playAudio();" class="btn btn-lg btn-primary btn-block" role="button">Start</button>
+                                                <button  onClick="pauseAudio();" class="btn btn-lg btn-primary btn-block" role="button">Pause</button>
+                                            </div>
+                                        </div>
+                                    </div>             
+                                </div>           
+                            </div>
+							
+						<!-- PUNCHES AND COMBINATIONS PAGE -->	
+							<div data-role="view" id="jab" data-layout="defaultlayout" data-title="Jab">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="thumbnail">
+                                            <img><iframe width="20%" src="http://www.youtube.com/embed/F660oKRViEs?rel=0" frameborder="0" allowfullscreen></iframe>
+                                            <div class="center-block caption inboxList">
+                                                <h3 class="times">Jab</h3>
+												<br>
+                                                <p class="summary">This is the written description for how to throw the jab</p>
+                                            </div>
+                                        </div>
+                                    </div>             
+                                </div>           
+                            </div>
+<!-- LAYOUTS -->
+        <div data-role="layout" data-id="drawer-layout">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a data-role="button" data-rel="drawer" href="#my-drawer"  data-icon="drawer-button" data-align="left"></a>
+                    <span data-role="view-title"></span>
+                    <a class="nav-button" data-align="right" data-role="backbutton">Back</a>
+                </div>
+            </header>
+        </div>
+        <div data-role="layout" data-id="defaultlayout">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a data-role="button" data-rel="drawer" href="#my-drawer"  data-icon="drawer-button" data-align="left"></a>
+                    <span data-role="view-title"></span>
+                    <a class="nav-button" data-align="right" data-role="backbutton">Back</a>
+                    <!--<a data-align="right" data-role="button" id="homes" class="nav-button" href="#/">Home</a>-->
+                </div>
+            </header>
+        </div>        			  
+<!-- END OF VIEWABLE -->        
+        <script> 
+            // reset global drawer instance, for demo purposes
+            kendo.mobile.ui.Drawer.current = null;
+        </script>
+		<script>
+			var audioElement = document.createElement('audio');
+			audioElement.setAttribute('src', 'http://samofit.com/12-9-13.new.mp3');							
+		</script>
+        <style>      
+ 
+a:active
+{ 
+    background-color:#E80C7A !important;
+}
+
+            .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
+            .km-inbox:before, .km-inbox:after { content: "\E0B0"; }
+            .km-sent:before, .km-sent:after { content: "\E0C6"; }
+            .km-trash:before, .km-trash:after { content: "\E0C3"; }
+            .km-spam:before, .km-spam:after { content: "\E0C5"; }
+            .km-star:before, .km-star:after { content: "\E0D7"; }
+            .km-settings:before, .km-settings:after { content: "\E0DA"; }
+            .km-off:before, .km-off:after { content: "\E0B9"; }
+
+            .inboxList
+            {
+                font-size: .8em;
+                text-align: left;
+            }
+
+            .inboxList p,
+            .inboxList h2,
+            .inboxList h3
+            {
+                margin: 5px 2px 0 0;
+            }
+
+            .inboxList p,
+            .inboxList h3
+            {
+                color: #ccc;
+                text-align: left;
+            }
+
+            .inboxList h3.times
+            {
+                color: #369;
+                float: left;
+                margin: 0 12px 0 0;
+            }
+            
+            .inboxList h3.time
+            {
+                color: #369;
+                float: left;
+                margin-right: 10px;
+            }
+            
+            .km-android .km-view:not(.km-splitview) 
+            {
+            -webkit-box-direction: normal;
+            -moz-box-direction: normal;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        	}
+            #my-drawer .active 
+            {
+            background-color: #E80C7A;
+            }
+                        
+        </style>
+        
+<script>
+    /*$(function() {
+        $(".drawer-link").click(function() {
+            //$("#my-drawer").data("kendoMobileDrawer").hide();
+            $(".drawer-link").removeClass("active");
+            $(this).addClass("active");
+            return false;
+        });
+    });
+    
+    $("#homes").click(function() {
+     	$(".homey").addClass("active");
+        $!(".homey").removeClass("active");
+    })*/
+</script>
+        
+		<script>
+ 
+             url = "Audio/12-9-13.wav";
+
+             my_media = new Media(url);
+            
+            function playAudio(url) 
+            {
+                // Play audio
+                my_media.play();
+                my_media.setVolume('1.0');  
+       	 }
+            
+            function pauseAudio(url) 
+            {
+                // Play audio
+                my_media.pause();
+                console.log("media paused");  
+       	 }
+        </script>
+        <script>
+            var app = new kendo.mobile.Application($(document.body), { transition:'zoom' });
+        </script>
+
+</body>
+</html>
