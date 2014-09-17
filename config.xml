@@ -6,10 +6,10 @@
         id        = "com.runapp.samofit"
         version   = "1.0.2">
 	
-    <name>Endurance log</name>
+    <name>SaMo SSL</name>
 
     <description>
-        SaMo Fit run app.
+        SaMoFit steady state log.
     </description>
 
     <author href="http://samofit.com" email="qmcgilvery12@gmail.com">
