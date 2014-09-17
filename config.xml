@@ -57,12 +57,12 @@
     <gap:plugin name="org.apache.cordova.file" />
     <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.globalization" />-->
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="org.apache.cordova.vibration" />-->
+    <gap:plugin name="org.apache.cordova.vibration" />
 	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.4.0">
     <param name="APP_ID" value="1379454819008951" />
     <param name="APP_NAME" value="SaMo Fit Login" />
